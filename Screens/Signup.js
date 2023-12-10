@@ -1,8 +1,11 @@
 import { View, Text, TextInput, Button, Image } from "react-native";
 import { Formik, Field, Form } from "formik";
+
+import { useNavigation } from '@react-navigation/native';
 // import Hiring_Mine_Logo from "\AwesomeProject\assets\Hiring_Mine_Logo-453a72d3-removebg-preview.png"
 
-function HomeScreen() {
+function Signup() {
+  const navigation = useNavigation();
   return (
     <View
       style={{
@@ -126,11 +129,12 @@ function HomeScreen() {
             }}
           />
 
-          <Button title="Submit" onPress={() => {}} />
+          <Button title="Submit" onPress={() => navigation.navigate('SecondScreen')} />
+
         </Form>
       </Formik>
     </View>
   );
 }
 
-export default HomeScreen;
+export default Signup;
